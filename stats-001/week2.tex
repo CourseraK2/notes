@@ -1,0 +1,79 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\begin{document}
+
+Rando Process: You know the 'possible outcomes' , but dont know what it will be.
+
+Frequentist Intepretation:\\
+Probability of an event is the proportion of time sevent will occur if the experiment is to be done for infinit times\\
+
+Bayesian Interpretation:\\
+Subjective belief. For e,g probability tht it would rain today = 0.4. Prior info/sense builtin.
+ Law of large numberS: Collect more data and proportion of occurence of a particular event converged to its probaility
+ 
+ Gamblers' fallcaly/ Lw of averages: Randomization if supposed to compensate for what happened in the past . NO! If you see 10 consectuive heads on toss, the probaility of seeing a head on the 11th toss is also 0.5!
+ 
+ Disjoin(mutually exclusive ) events. P(A and B) = 0 if they are mutually exclusive. I cannot fail and pass together.
+ 
+ Non disjoint = P(a or b) = P(a) + P(b) - P(a and b)
+ 
+ Probability distribution tables:
+ \begin{itemize}
+\item Events listed must be disjoint
+\item probability should be between 0 and 1
+\item All should sum to 1	
+
+
+\end{itemize}
+
+Do sume of two disjoint events always add upto 1? NO!, ther can be other vents as well
+\\
+Sum of complementary events add upto 1. Complementary events are always disjoint and not vice versa.
+
+ 
+Two events are disjoint if they cannot happen at the same time. Independent events are one where outcome of one proovides no useful info about the other.
+
+So $P(A and B)=0$ is for disjoint 
+and $P(A|B) = A(A)$ is for indepenedent events
+
+Bayes theormed: \\
+\begin{math}
+P(A|B) = \frac{P(A and B)}{P(B)}
+\end{math}
+
+\begin{math}
+Z = \frac{obseravtion -mean}{SD}
+\end{math}
+S core of a mean = 0	
+
+Percentile = are under curve till that observation point
+
+For R:
+ \begin{itemize}
+ \item pnorm: Given score find percentile
+ \item qnorm: Given percentle find score
+ 
+  \end{itemize}
+ 
+ 
+ When an individual trial has only two possible outcomes it is called
+ Bernoulli RV
+ 
+ dbinom(k,n,p) in R gives probability of k successes with proability =p in n  trials
+ 
+ For Binomial :
+ \begin{itemize}
+ \item $\mu=np$
+ \item $\sd=\sqroot{np(1-p)}
+ \end{itemize}
+ 
+ Success-failure rule: A binomical distribution with nearly 10 successed and 10 failers is nearly normal.
+ 
+ np $>=$10
+ n(1-p) $>=$10
+
+\end{document}
+
