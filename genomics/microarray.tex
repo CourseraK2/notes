@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\begin{document}
+
+Use of Microarray/NGS:\\
+To explain phenotypic variation[Whjy are cancer cells affected by some drugs while others not]
+
+
+Transcription inside the nucleus gives rise to mRNA which goues outside the nucleus to 
+be translated into proteins[Amino acids]
+
+What makes every cell different[Refer notes.tex]: Gene expression is different for 
+each cell. 
+
+why shouild a liver cell give rise to only a lover cell? It cannot be coded in the sequence
+since this sequence is commeon with the skin cell too. This arises due to epigenetist(x)c
+
+Outliers in data can shift your mean and standard deviation by high values, a more robust estimator is the median and MAD.
+
+MAD(median absolute deviation) = 1.4826*median$(abs($X_i$-median($X$)))
+Consider $[$2,2,3,4,14$]$, meadian =3 , absolute deviations from median = $[$1,1,0,1,11$]$ abnd now the MAD is 1, thus unaffected by the 
+outlier
+
+Pearson correlation: 
+
+For opulation:
+
+
+\begin{math}
+p = \frac{cov(X,Y)}{\sigma_x \sigma_y} = \frac{E(X-\mu_x)(Y-\mu_y)}{\sigma_x \sigma_y}
+
+\end{math}
+\begin{math}
+For a sample:\\
+
+p = \frac{\sum_{i=0}^n(X_i-\bar{X})(Y_i-\bar{Y})}{\sqrt{\sum_{i=0}^n(X_i-\bar{X})^2} \sqrt{\sum_{i=0}^n(Y_i-\bar{Y})}}
+
+
+
+\end{math}
+
+
+Spearman correlation:\\
+This is same as pearson correlation but for ranked variables. the raw scores $X_i$, $Y_i$ are converted to 
+ranks 
+
+
+
+When the variables are not normally distributed,  or the relationship between the variables is not linear
+it would make ore sense to use the Spearman correlation. It takes no assumption about the distribution and hence
+ since ranks are being used instead of raw values, the large/small outliers will have no  effect.
+If the rankes of X,Y are similar theere is for sure a correlation but that might not be shown by the Pearson coefficient
+ because the relationship might not necessarily be linear.
+
+In short use pearson for normally distributed datasets and Spearman otherwise.
+
+Plotting:
+
+Pie is replaced by bar\\
+
+Bar plot woith erros is replaced by box plot\\
+
+Scale is importane(log transform for example)\\
+
+For comparing variables use a scatter plot\\
+
+2D projections are much more telling\\
+
+Why MA plots? \\
+
+You want to tilst your head to find out the outliers? Why not tilt the graph itself
+
+
+Why do we plot qq plots? : Is the data normally distributed?
+
+
+Z scores: \\
+
+\begin{math}
+Z_i= \frac{X_i_\bar{X}}{sd_X}
+\end{math}
+
+
+Use of Microarrays:\\
+
+1. Gene Expression \\
+2. Genotyping SNP array: Is the person AA, AG or GG?: Have probels for allele1, allele2, see which hybridises\\
+
+3. Chip Mircoarray: Given the DNA find out where exactly is a specific protein bound: Fragment the DNA[some pieces have the protein others dont]
+
+Now with the protein bound DNA hyvbridise them to the tiling array. If the probe "lightsup" then that probe has the associate protein 
+bound to it
+
+
+Next Gneration Sequencing:\\
+
+Prepare a sample. Thendadd adapters. These adapters lets your sequences attach themselves to a piece
+of solid. Once attached to solid we now amplify each one so that we have millinons of 
+copies of each. Now start adding nucleotides which have already been blabelled. This
+is not hybridisation but nuclotide elongation. Once the first nucleotide
+attaches we take a picture . Now move to next base and keep taking pictures.
+Each time you take a picture you read all 4 intensities but the one emitting the max intensity is the
+one you just sequenced
+
+
+apllications: \\
+
+
+\begin{enumerate}
+\item Resequencing
+\item SNP discovery and genotyping
+\item Variant discovery and quantification
+\item TF binding: Chip-Seq
+\item Gene expression: RNA-seq
+\item Methylation
+
+
+\end{enumerate}
+
+
+Variant Detection: Multiple reads with different base at one position \\
+RNA-Seq: RNa convert to DNA and then map to reference Gene. This is done for two sample. if you see more reads in sample1 then it is differentially expressed.\\
+Ci[Seq: Similar to DNa seq . You take taht part of dNa bound to protein./ Using peak detection find locations that have enough reads to be believed t
+bound to protein.
+
+
+
+\end{document}
