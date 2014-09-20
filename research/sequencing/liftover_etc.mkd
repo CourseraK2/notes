@@ -94,4 +94,6 @@ LiftOver chains are the chains wextracted from nets. You can choose to chain thi
 
 
 ## References
-[#evolution] Kent, W. J., Baertsch, R., Hinrichs, A., Miller, W., & Haussler, D. (2003). Evolution ’ s cauldron : Duplication , deletion , and rearrangement in the mouse and human genomes, (Track II).
+![#evolution] Kent, W. J., Baertsch, R., Hinrichs, A., Miller, W., & Haussler, D. (2003). Evolution ’ s cauldron : Duplication , deletion , and rearrangement in the mouse and human genomes, (Track II).
+
+http://genomewiki.cse.ucsc.edu/index.php/Chains_Nets
