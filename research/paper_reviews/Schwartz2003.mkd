@@ -1,0 +1,22 @@
+#Human–Mouse Alignments with BLASTZ Scott
+
+##Synopsis
+
+The paper seeems to be lacking details at various points, especially when it comes to define k-mer selection.
+
+
+The idea was to improve BLASTZ with an improved sensitivty and specificity.
+Sensitivity = Fraction of orthologous sequences aligned
+Specificity = Fraction of aligned sequences that are orthologous
+
+In summary BLAST is similar to Gapped BLAST, search for near-exact matches, extend short matches without allowing gaps and extend by dynamic programming. The difference lies in BLASTZ using a different scoring matrix.
+
+BLASTZ was used to generate complete catalogue of matching regions between the human and mouse genomes. The tricks for optimisation invoved throwing away repeats/ low-complexity sequences etc. To measure the spurious matches, they reversed the mouse genome with low-complexity regios soft masked and aligned it to human.Since the repeats(atatatatat) and poly nucleotide tails will be similar in the reversed strand, and all such matches can be used to estimate the spurious matches with the original strand. However it ignores the fact that human gnomes also exhibit dinucleotide asymmetry  so the matches will be less frequent even if the mouse genome is reversed. A quick way to check this is : CpG density  much greater than GpC density so reversed mouse strand would not align to these CpG even if it was earlier.
+
+ 
+
+
+
+
+##Reference
+Schwartz, S., Kent, W. J., Smit, A., Zhang, Z., Baertsch, R., Hardison, R. C., … Miller, W. (2003). Human-mouse alignments with BLASTZ. Genome Research, 13(1), 103–7. doi:10.1101/gr.809403

@@ -1,0 +1,84 @@
+Homology
+========
+Homology refers to the presence of shared ancestry between a pair of structure or genes in two different species. Eg. ovaries in females and testes in males since they originate from same embryonic tissue.
+
+Analogous organs are opposite to homologous organs which essentially do the same job but evolved 
+independently in each lineage after separating from their ancestors.
+
+Bat's wings are analogous to birds wings as they evolved separately but they are homologous to the forelimbs as they served the same purpose (of a hand) in the ancestory.
+
+###Orthology
+
+If homologous sequences descend from the same ancestral sequence separated by specialisation event where one specie diverged from the other  then they are orthologous. It is **strictly** defined in terms of ancestry. They often but not always have the same function. The way to confirm the ancestry(to differentiate them from gene duplication events) we rely on phylogenetic analysis of the lineage by comparing gene trees with specie trees
+
+
+###Paralogy
+
+If the homologous sequences were created via a gene duplication event to occupy two different sites in the same genome, then they are paralogous. **They may or may NOT belong to the same species.**
+In the latter case the duplication happened just before speciation did! So you the genome ended up duplicating its gene at other position before it diverged to two different specie. Since the duplicated gene is not under any selective pressure, it might evolve to perform tasks different from its paralog.
+
+
+### Ortholog v/s Paralog
+
+Jensen in his article [#orthopara] gives a very clear way of tackling this confusion:
+> Determination of orthology or paralogy in a vertical line of descent is a simple matter of tracking any pair of genes back to where they join, either at an inverted Y (in which case they are orthologs) or at a horizontal line (in which case they are paralogs).
+
+**Paralogs are not necessarily restricted to same specie.**
+
+![orthop](./orthopara.png)
+
+In the above figure:
+
++ A1 and B1 are at the same level, they originated from duplicated genes A,B and are paralogs
+
++ A1 and A2 originated from the same gene A, but are now separated by a speciation event and are orthologous
+
++ A1 and B2 are paralogs
+
++ A2 and B1 are also paralogs
+
++ A2 and B2 are paralogs
+
++ B1 and B2 are orthologs
+
+
+In the case (b):
+
++ A1,A2 are orthologs
+
++ A1, B2 are orthologs
+
++ A2,B2 are paralogs
+
+
+## Computational ways to detect orthologs:
+
+Reciprocal Best Hits (RBH), where orthologs are assumed if two genes each in a different genome find each other as the best hit in the other genome.
+
+### Reciprocal Best Hits (RBH)
+
+Reciprocal best hits BLASTS protein A1 in genome A to locate the best hit in B as B1. This in no way guarantees that there is no A2 in A which might potentially be better than B1. So reverse blast B1 and if A1 turns up as best hits they are likely orthologs.
+
+
+### Caveats
+A1 and B1 being the best hits of each other does not guarantee them being orthologs: 
+
++ If a gene duplication event took place post speciation, RBH will identify only one of the orthologs.
+
++ If a gene duplication event occured pre speciation, the paralogs will be identified as orthologs.
+
+
+
+
+
+Reciprocal Shortest Distances (RSD) uses evolutionary measure of distance[TODO: READ!]
+
+ 
+
+### References
+[#orthopara] Jensen, R. a. (2001). Orthologs and paralogs - we need to get it right. Genome Biology, 2(8), INTERACTIONS1002. Retrieved from http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=138949&tool=pmcentrez&rendertype=abstract http://www.ncbi.nlm.nih.gov/pmc/articles/PMC138949/pdf/gb-2001-2-8-interactions1002.pdf
+
+
+
+
+

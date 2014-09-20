@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="understanding-liftover">Understanding LiftOver</h1>
+<h2 id="what">What?</h2>
+<p>A tool from UCSC used to convert genome coordinates and annotations(???) between assemblies. Reference genome assemblies keep changing. To facilitate statistical analysis and data integration/visualization it might often be convenient to &quot;liftOver&quot; the results to the latest(or in some cases older) assemblies.</p>
+<p>Any genome can be thought of as map. A map with an ever increasing resolution. Everytime a new assembly is released, it leads to a better resolution of this map and the old locations need to be &quot;liftedOver&quot; to create a correspondence[TODO: One-to-one?] between these</p>
+<h2 id="algorithm-overview">Algorithm Overview</h2>
+<h3 id="chain-file">Chain File</h3>
+<p>UCSC's chain file describes pairwise alignment, the unique feature being allowing gapped alignments in the pairs simultaneously.</p>
+<p>Here is a <del>blatantly copied</del> example from UCSC[http://genome.ucsc.edu/goldenPath/help/chain.html]</p>
+<h4 id="header">Header</h4>
+<pre>
+ <b>chain</b> score <i>r</i>Name <i>r</i>Size <i>r</i>Strand <i>r</i>Start <i>r</i>End <i>q</i>Name <i> q</i>Size <i>q</i>Strand <i>q</i>Start <i>q</i>End id 
+</pre>
+
+<pre>
+<table>
+    <tr><td><b>chain</b></td><td>Required keyword</td></tr>
+    <tr><td>score</td><td>chain score[?]</td></tr>
+    <tr><td>[<i>r/q</i>]Name</td><td>Reference/Query Name</td></tr>
+    <tr><td>[<i>r/q</i>]Size</td><td>Reference/Query </td></tr>
+    <tr><td>[<i>r/q</i>]Strand</td><td>Reference/Query </td></tr>
+    <tr><td>[<i>r/q</i>]Start</td><td>Reference/Query chromosome start coordinate </td></tr>
+    <tr><td>[<i>r/q</i>]End</td><td>Reference/Query  Chromosome end coordinate</td></tr>
+   </table>
+</pre>
+</body>
+</html>

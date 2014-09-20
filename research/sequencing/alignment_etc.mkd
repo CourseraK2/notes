@@ -1,0 +1,21 @@
+##Assorted discussion
+
+##Soft Masking
+
+Indicate sequences by low-case letters
+
+
+##Hard Masking
+Replace low-case from soft-masked to 'N'(nucleotide) or 'X'(Amino acid)
+
+##WHY???
+
+Identify low-complexity region in the genome. Repeats, or poly  nucleotide rich regions are low-complexity. E.g ATATAT, AAAAAA 
+
+
+BLAST implements soft clipping and hard clipping such that the alignment scores do not consider these sequence if they occur at the bginning of the sequnces. The scores may however 
+
+##ToDO
+
+Read: http://bioinformatics.oxfordjournals.org/content/24/3/319.full
+
