@@ -72,6 +72,19 @@ In order to select the best alignment for a particular region (wrt human genome)
 
 Inversions and repeats are classified to be syntectic, since they come from the same region of the genome and would either be embedded within a long chain.
 
+Chains are NOT single-coverage in either target or query
+Nets is single coverage for the target but not query[The better score gets selected first and is marked!]
+Chains are symmetrical, nets are not![For chains it does not matter if we swap human-mous with mouse-human, they will almost be the same, unless masking makes a difference!]
+
+
+LiftOver chains are the chains wextracted from nets. You can choose to chain this from the same species or from different species.
+
+
+
+
+
+
+
 
 
 
