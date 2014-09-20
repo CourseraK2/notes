@@ -36,7 +36,11 @@ Here is a ~~blatantly copied~~ example from UCSC[http://genome.ucsc.edu/goldenPa
 
 ## Chains and Nets
 
+The paper [#evolution] talks about studying duplications, deletions and rearrangements that are at scales ranging from a single base to complete chromosomes. To make these observations they developed a new alignment technique capable of handling large gaps which the earlier techniques had seriously lacked. This gave result to Chains and Nets to study orthologs and paralogs.
+
+The evolution of nonduplicated genes is constrained by the selection pressure. On the other hand 
+
 
 
 ## References
-Kent, W. J., Baertsch, R., Hinrichs, A., Miller, W., & Haussler, D. (2003). Evolution ’ s cauldron : Duplication , deletion , and rearrangement in the mouse and human genomes, (Track II).
+[#evolution] Kent, W. J., Baertsch, R., Hinrichs, A., Miller, W., & Haussler, D. (2003). Evolution ’ s cauldron : Duplication , deletion , and rearrangement in the mouse and human genomes, (Track II).
