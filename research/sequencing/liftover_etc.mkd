@@ -34,6 +34,22 @@ Here is a ~~blatantly copied~~ example from UCSC[http://genome.ucsc.edu/goldenPa
 </pre>
 
 
+### Alignment data lines
+
+<pre>
+size dr dq
+</pre>
+
+<pre>
+<table>
+<tr><td>size </td><td>Size of contig[ungapped alignment]</td></tr>
+<tr><td>dr</td><td>Difference between end of this block and beginning of next block for Reference sequence</td></tr>
+<tr><td>dq</td><td>Difference between end of this block and beginning of next block for Query sequence</td></tr>
+
+The last line of this section contains single number, referring to the size of the last block.
+
+</table>
+</pre>
 ## Chains and Nets
 
 The paper [#evolution] talks about studying duplications, deletions and rearrangements that are at scales ranging from a single base to complete chromosomes. To make these observations they developed a new alignment technique capable of handling large gaps which the earlier techniques had seriously lacked. This gave result to Chains and Nets to study orthologs and paralogs.
@@ -52,7 +68,10 @@ A chain is defined as the ordered sequence of traditional pairwise nucleotide al
 
 The way deletions are handled is unique. Scoring is defined such that simultaneous gap penalty is less than a mismatch penalty. So rather than a 'forced' aligment via mismatch, it is more preferrable to start a simultaneous gap! This is also relevant to transolcations, inversions.
 
-In order to select the best alignment for a particular region (wrt human genome) CHAINNET is used. It starts of by marking all nucleotides as unused. All possible chains are put into a list with high scoring chains going in first. Next it iterates over all these chains and at each step throws out parts from the chain intersecting with the bases already covered by previous chains. Consider a chain A covering bases which are marked to be in gap of a previous chain B. Then A becomes a child of B, essentially you have discoverd an extra alignment.. This leads to creation of a hierarchy 
+In order to select the best alignment for a particular region (wrt human genome) CHAINNET is used. It starts of by marking all nucleotides as unused. All possible chains are put into a list with high scoring chains going in first. Next it iterates over all these chains and at each step throws out parts from the chain intersecting with the bases already covered by previous chains. Consider a chain A covering bases which are marked to be in gap of a previous chain B. Then A becomes a child of B, essentially you have discoverd an extra alignment.. This leads to creation of a hierarchy leading to the "net".
+
+Inversions and repeats are classified to be syntectic, since they come from the same region of the genome and would either be embedded within a long chain.
+
 
 
 

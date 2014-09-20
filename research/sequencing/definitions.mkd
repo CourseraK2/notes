@@ -18,6 +18,9 @@ If the homologous sequences were created via a gene duplication event to occupy 
 In the latter case the duplication happened just before speciation did! So you the genome ended up duplicating its gene at other position before it diverged to two different specie. Since the duplicated gene is not under any selective pressure, it might evolve to perform tasks different from its paralog.
 
 
+###Synteny 
+Physical co-localisation of loci on the same chromosome of the individual or species
+
 ### Ortholog v/s Paralog
 
 Jensen in his article [#orthopara] gives a very clear way of tackling this confusion:
