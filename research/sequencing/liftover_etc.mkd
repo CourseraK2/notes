@@ -32,3 +32,11 @@ Here is a ~~blatantly copied~~ example from UCSC[http://genome.ucsc.edu/goldenPa
     <tr><td>[<i>r/q</i>]End</td><td>Reference/Query  Chromosome end coordinate</td></tr>
    </table>
 </pre>
+
+
+## Chains and Nets
+
+
+
+## References
+Kent, W. J., Baertsch, R., Hinrichs, A., Miller, W., & Haussler, D. (2003). Evolution ’ s cauldron : Duplication , deletion , and rearrangement in the mouse and human genomes, (Track II).
