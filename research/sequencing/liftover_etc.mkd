@@ -38,7 +38,26 @@ Here is a ~~blatantly copied~~ example from UCSC[http://genome.ucsc.edu/goldenPa
 
 The paper [#evolution] talks about studying duplications, deletions and rearrangements that are at scales ranging from a single base to complete chromosomes. To make these observations they developed a new alignment technique capable of handling large gaps which the earlier techniques had seriously lacked. This gave result to Chains and Nets to study orthologs and paralogs.
 
-The evolution of nonduplicated genes is constrained by the selection pressure. On the other hand 
+The evolution of non-duplicated genes is constrained by the selection pressure. On the other hand the duplicated regions have the extra freedom due to the lack of any kind of selection procedure  and hence are known to undertake new functions.
+
+
+A pairwise alignment involves a scoring function that assigns positive scores for matches and negative scores to gaps/mismatches. The "Affine" technique penalises the operation of opening a gap, but extending an open gap is relatively un-penalised. These are generally useed with protein serquences where the gaps are rare and short.
+
+One downside(?) of the traditional pairwise alignment is that at a time it allows a gap to occur only in one of the sequences, thus indepedent deletion events from both seqeunces cannot be represented. They also do not allow for inversions, translocations and duplications. Chains and nets cover these holes up!
+
+Using AXTCHAIN a  piecewise linear gap scoring scheme, maximally scored 'chained' alignments of the **gapless** subsection of the inout sequence is generated.
+
+
+A chain is defined as the ordered sequence of traditional pairwise nucleotide alignment separated by gaps, possibly in both species. The order of these blocks is consistent with the genomic sequence order in both species. Hence chains do not have inversions translocations or duplications in regions it aligns. Chains can skip over a region in one or both species. For eg inverted region in one of the species is skipped entirely in the chain.
+
+The way deletions are handled is unique. Scoring is defined such that simultaneous gap penalty is less than a mismatch penalty. So rather than a 'forced' aligment via mismatch, it is more preferrable to start a simultaneous gap! This is also relevant to transolcations, inversions.
+
+In order to select the best alignment for a particular region (wrt human genome) CHAINNET is used. It starts of by marking all nucleotides as unused. All possible chains are put into a list with high scoring chains going in first. Next it iterates over all these chains and at each step throws out parts from the chain intersecting with the bases already covered by previous chains. Consider a chain A covering bases which are marked to be in gap of a previous chain B. Then A becomes a child of B, essentially you have discoverd an extra alignment.. This leads to creation of a hierarchy 
+
+
+
+
+
 
 
 
