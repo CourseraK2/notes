@@ -1,0 +1,25 @@
+
+##Download
+
+```
+git clone git@github.com:BenLangmead/bowtie.git
+cd bowtie
+make
+```
+
+```
+ wget -c http://hgdownload-test.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.align.gz
+ gunzip hg19.fa.align.gz && mv hg19.fa.align.gz hg19.fa
+```
+
+```bowtie-build hg19.fa hg19
+```
+
+```
+install.packages(c('multicore','doMC','foreach','quantreg','R.utils')) 
+system("wget http://zinba.googlecode.com/files/zinba_2.02.03.tar.gz")
+install.packages("zinba_2.02.03.tar.gz", repos=NULL) 
+
+```
+ 
+
