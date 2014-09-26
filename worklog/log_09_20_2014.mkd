@@ -23,5 +23,7 @@ install.packages("zinba_2.02.03.tar.gz", repos=NULL)
 ```
  
 ```
-fastq-dump filename.sra
+fastq-dump filename.sra --split-3
 ```
+
+
